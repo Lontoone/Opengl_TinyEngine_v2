@@ -1,3 +1,7 @@
+# What is it?
+
+An opengl demo project. A re-make version of [My previous project](https://github.com/Lontoone/TinyEngine)
+
 # How to run
 ```bash
 mkdir build
