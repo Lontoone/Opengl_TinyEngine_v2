@@ -3,8 +3,17 @@ project(TinyEngine_v2)
 
 # Specify the C++ standard
 set(CMAKE_CXX_STANDARD 20)
+set(CMAKE_CXX_STANDARD_REQUIRED True)
+#===================================
+#		This project
+#===================================
+#file(GLOB_RECURSE SOURCE_FILES src/app/*. src/core/*.cpp src/core/*.hpp src/core/*.h src/*.cpp src/*.hpp src/*.h)
+file(GLOB_RECURSE SOURCES "src/*.cpp" "src/*.hpp" "src/*.h" "src/core/*.cpp" "src/core/*.hpp" "src/core/*.h")
+#set(SOURCES src/app/*. src/core/*.cpp src/*.cpp ) 
+#set(HEADERS src/core/*.hpp src/core/*.h src/*.hpp src/*.h)
+
 # Add your executable
-add_executable(${PROJECT_NAME} main.cpp)
+add_executable(${PROJECT_NAME} src/app/main.cpp ${SOURCES})
 
 
 # Include the FetchContent module
