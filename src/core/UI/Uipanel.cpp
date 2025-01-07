@@ -1,5 +1,10 @@
 #include "UiPanel.hpp"
 
+void ltn::UiPanel::add_draw_item(std::function<bool()> _draw_cmd)
+{
+	this->m_draw_cmds.push_back(_draw_cmd);
+}
+
 void ltn::UiPanel::draw_ui_panel()
 {
 	ImGui::Text("1234");

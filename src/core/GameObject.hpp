@@ -5,17 +5,19 @@
 #include "Flags.h"
 #include <map>
 //#include "UI/UiableComponent.hpp"
+#include "TransformObject.h"
 #include "UI/UiPanel.hpp"
 
 namespace ltn{
-class GameObject : public Component , public UiPanel
+class GameObject : public Component //, public UiPanel
 {
 public:
-	GameObject(){};	
+	GameObject();	
 	GameObject(const char* _obj_name);
 	~GameObject(){};
 		
 	const char* name ="";
+	std::unique_ptr<TransformObject> transform = nullptr;
 	//::std::string name="";
 	const char* m_instance_id="";
 	//int32 m_instance_id =0;

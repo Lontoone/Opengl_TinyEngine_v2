@@ -22,8 +22,8 @@ namespace ltn {
 		//void add_draw_item(t_draw_cmd& _draw_cmd);
 
 		void add_draw_item(std::function<bool()> _draw_cmd);
-		void add_drop_down_menu(::std::vector<::std::string>& _ops, void(*func)(::std::string));
-		void draw_ui_panel() ;
+		void add_drop_down_menu(::std::vector<::std::string>& _ops, void(*func)(::std::string)){};
+		void draw_ui_panel();
 		void create_panel(const char* window_name);
 		void panel_begin();
 		void panel_end();
